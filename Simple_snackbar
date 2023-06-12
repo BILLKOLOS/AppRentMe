@@ -1,0 +1,53 @@
+import androidx.activity.compose.setContent
+import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.Button
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Text
+import androidx.compose.material.rememberScaffoldState
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.InternalTextApi
+import com.shubham.sc_prep.ui.theme.SCPrepTheme
+import kotlinx.coroutines.launch
+
+class MainActivity : AppCompatActivity() {
+    @InternalTextApi
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            SCPrepTheme {
+                ScaffoldWithSimpleSnackbar()
+            }
+        }
+    }
+}
+
+@Composable
+fun ScaffoldWithSimpleSnackbar() {
+    val scaffoldState = rememberScaffoldState()
+    val scope = rememberCoroutineScope()
+    Scaffold(
+        scaffoldState = scaffoldState
+    ) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Button(
+                onClick = {
+                    scope.launch {
+                        scaffoldState.snackbarHostState.showSnackbar("Source Codes")
+                    }
+                }
+            ) {
+                Text(text = "Show Snackbar")
+            }
+        }
+    }
+}
