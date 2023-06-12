@@ -1,0 +1,45 @@
+import android.os.Bundle
+import android.widget.Toast
+import androidx.activity.compose.setContent
+import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.ExtendedFloatingActionButton
+import androidx.compose.material.Icon
+import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.InternalTextApi
+import com.shubham.sc_prep.ui.theme.SCPrepTheme
+
+class MainActivity : AppCompatActivity() {
+    @InternalTextApi
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            SCPrepTheme {
+                Column(
+                    modifier = Modifier.fillMaxSize(),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    ExtendedFabWithIcon()
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun ExtendedFabWithIcon() {
+    val context = LocalContext.current
+    ExtendedFloatingActionButton(onClick = {
+        Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show()
+    }, text = { Text(text = "EXTENDED FAB") },
+        icon = { Icon(Icons.Filled.Favorite, contentDescription = "Favorite") })
+}
