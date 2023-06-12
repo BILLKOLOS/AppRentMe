@@ -1,0 +1,1 @@
+import android.os.Bundle import android.widget.Toast import androidx.activity.compose.setContent import androidx.appcompat.app.AppCompatActivity class MainActivity : AppCompatActivity() { override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState) setContent { Toast.makeText(this, "Success login", Toast.LENGTH_SHORT).show() } } }
