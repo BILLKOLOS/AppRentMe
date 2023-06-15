@@ -8,3 +8,4 @@ Parts of an application.
 The codes are not arranged in order 
 But are placed here for a mock review 
 And peer criticism. 
+LEAVE A STAR  IF BEST, FORK IT AND SUMMIT  PULL REQUESTS FOR ENHANCEMENTS
