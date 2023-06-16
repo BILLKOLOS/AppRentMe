@@ -1,0 +1,28 @@
+1 <?xml version="1.0" encoding="utf-8"?>
+ 2 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 3     xmlns:app="http://schemas.android.com/apk/res-auto"
+ 4     xmlns:tools="http://schemas.android.com/tools"
+ 5     android:layout_width="match_parent"
+ 6     android:layout_height="match_parent"
+ 7     android:gravity="center"
+ 8     android:orientation="vertical"
+ 9     tools:context=".MainActivity">
+10 
+11     <EditText
+12         android:id="@+id/editText"
+13         android:layout_width="match_parent"
+14         android:layout_height="wrap_content"
+15         android:layout_margin="20dp"
+16         android:hint="Enter your Name"
+17         android:inputType="text" />
+18 
+19     <TextView
+20         android:id="@+id/textView"
+21         android:layout_width="wrap_content"
+22         android:layout_height="wrap_content"
+23         android:layout_margin="20dp"
+24         android:gravity="center"
+         android:textColor="#2680EB"
+         android:textStyle="bold" />
+     
+ </LinearLayout>
