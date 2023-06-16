@@ -1,0 +1,40 @@
+ <?xml version="1.0" encoding="utf-8"?>
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+ 5     android:layout_width="match_parent"
+6     android:layout_height="match_parent"
+ 7     android:orientation="vertical"
+ 8     android:gravity="center"
+ 9     tools:context=".MainActivity">
+10 
+11 
+12     <TextView
+13         android:id="@+id/textView_one"
+14         android:layout_width="match_parent"
+15         android:layout_height="wrap_content"
+16         android:layout_margin="20dp"
+17         android:gravity="center"
+18         android:text="This is Text One" />
+19 
+20     <TextView
+21         android:id="@+id/textView_two"
+22         android:layout_width="match_parent"
+23         android:layout_height="wrap_content"
+24         android:layout_margin="20dp"
+25         android:textColor="#2680EB"
+26         android:textStyle="bold"
+27         android:gravity="center"
+28         android:text="This is Text Two" />
+29 
+30     <TextView
+31         android:id="@+id/textView_three"
+32         android:layout_width="match_parent"
+33         android:layout_height="wrap_content"
+34         android:gravity="center"
+35         android:textColor="#ffffff"
+36         android:background="#2680EB"
+37         android:textStyle="bold"
+38         android:layout_margin="20dp"
+39         android:text="This is Text Three" />
+40 </LinearLayout>
