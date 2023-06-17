@@ -1,0 +1,49 @@
+ 1 <?xml version="1.0" encoding="utf-8"?>
+ 2 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 3     xmlns:app="http://schemas.android.com/apk/res-auto"
+ 4     xmlns:tools="http://schemas.android.com/tools"
+ 5     android:layout_width="match_parent"
+ 6     android:layout_height="match_parent"
+ 7     android:padding="10dp"
+ 8     tools:context=".MainActivity">
+ 9 
+10 
+11     <TextView
+12         android:layout_width="wrap_content"
+13         android:layout_height="wrap_content"
+14         android:layout_centerHorizontal="true"
+15         android:text="About Android"
+16         android:textColor="@android:color/black"
+17         android:textSize="20sp" />
+18 
+19     <TextSwitcher
+20         android:id="@+id/text_switcher"
+21         android:layout_width="wrap_content"
+22         android:layout_height="wrap_content"
+23         android:layout_marginTop="50dp" />
+24 
+25 
+26     <LinearLayout
+27         android:layout_width="match_parent"
+28         android:layout_height="wrap_content"
+29         android:layout_alignParentBottom="true"
+30         android:orientation="horizontal">
+31 
+32         <Button
+33             android:id="@+id/button_prev"
+34             android:layout_width="wrap_content"
+35             android:layout_height="wrap_content"
+36             android:layout_weight="1"
+37             android:text="Previous"
+38             android:textAllCaps="false" />
+39 
+40         <Button
+41             android:id="@+id/button_next"
+42             android:layout_width="wrap_content"
+43             android:layout_height="wrap_content"
+44             android:layout_weight="1"
+45             android:text="Next"
+46             android:textAllCaps="false" />
+47     </LinearLayout>
+48 </RelativeLayout>
+49 
