@@ -1,0 +1,25 @@
+ 1 <?xml version="1.0" encoding="utf-8"?>
+ 2 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 3     xmlns:app="http://schemas.android.com/apk/res-auto"
+ 4     xmlns:tools="http://schemas.android.com/tools"
+ 5     android:layout_width="match_parent"
+ 6     android:layout_height="match_parent"
+ 7     android:orientation="vertical"
+ 8     android:padding="16dp"
+ 9     tools:context=".MainActivity">
+10 
+11     <AutoCompleteTextView
+12         android:id="@+id/autoCompleteTextView"
+13         android:layout_width="match_parent"
+14         android:layout_height="wrap_content"
+15         android:layout_marginTop="10dp"
+16         android:completionThreshold="1" />
+17 
+18     <TextView
+19         android:id="@+id/textView"
+20         android:layout_width="wrap_content"
+21         android:layout_height="wrap_content"
+22         android:layout_marginTop="20dp"
+23         android:textColor="@android:color/black" />
+24 
+25 </LinearLayout>
