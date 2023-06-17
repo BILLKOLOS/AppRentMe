@@ -1,0 +1,36 @@
+ 1 <?xml version="1.0" encoding="utf-8"?>
+ 2 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 3     xmlns:app="http://schemas.android.com/apk/res-auto"
+ 4     xmlns:tools="http://schemas.android.com/tools"
+ 5     android:layout_width="match_parent"
+ 6     android:layout_height="match_parent"
+ 7     android:gravity="center"
+ 8     android:orientation="vertical"
+ 9     tools:context=".MainActivity">
+10 
+11     <TextView
+12         android:id="@+id/textView"
+13         android:layout_width="wrap_content"
+14         android:layout_height="wrap_content"
+15         android:layout_margin="20dp"
+16         android:textColor="#000000"
+17         android:textStyle="bold" />
+18 
+19     <Button
+20         android:id="@+id/button_1"
+21         android:layout_width="wrap_content"
+22         android:layout_height="wrap_content"
+23         android:layout_margin="20dp"
+24         android:text="Click Me" />
+25 
+26     <Button
+27         android:id="@+id/button_2"
+28         android:layout_width="wrap_content"
+29         android:layout_height="wrap_content"
+30         android:layout_margin="20dp"
+31         android:background="#2680EB"
+32         android:text="Toast"
+33         android:textAllCaps="false"
+34         android:textColor="@android:color/white"
+35         android:textStyle="bold" />
+36 
