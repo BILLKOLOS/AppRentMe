@@ -1,0 +1,17 @@
+1 <?xml version="1.0" encoding="utf-8"?>
+ 2 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 3     xmlns:app="http://schemas.android.com/apk/res-auto"
+ 4     xmlns:tools="http://schemas.android.com/tools"
+ 5     android:layout_width="match_parent"
+ 6     android:layout_height="match_parent"
+ 7     android:gravity="center"
+ 8     tools:context=".MainActivity">
+ 9 
+10     <ImageView
+11         android:id="@+id/imageView"
+12         android:layout_width="wrap_content"
+13         android:layout_height="wrap_content"
+14         android:layout_margin="20dp"
+15         android:src="@mipmap/ic_launcher" />
+16 
+17 </LinearLayout>
