@@ -1,0 +1,59 @@
+?xml version="1.0" encoding="utf-8"?>
+ 2 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 3     xmlns:app="http://schemas.android.com/apk/res-auto"
+ 4     xmlns:tools="http://schemas.android.com/tools"
+ 5     android:layout_width="match_parent"
+ 6     android:layout_height="match_parent"
+ 7     android:background="@android:color/white"
+ 8     android:orientation="vertical"
+ 9     android:padding="20dp"
+10     tools:context=".MainActivity">
+11 
+12     <TextView
+13         android:id="@+id/textView1"
+14         android:layout_width="wrap_content"
+15         android:layout_height="wrap_content"
+16         android:layout_gravity="center_horizontal"
+17         android:layout_marginTop="10dp"
+18         android:layout_marginBottom="50dp"
+19         android:textColor="@android:color/black"
+20         android:textSize="25sp"
+21         android:textStyle="bold" />
+22 
+23     <TextView
+24         android:id="@+id/textView2"
+25         android:layout_width="wrap_content"
+26         android:layout_height="wrap_content"
+27         android:layout_marginBottom="10dp"
+28         android:text="Which fruits do you like?"
+29         android:textColor="@android:color/black"
+30         android:textStyle="bold" />
+31 
+32     <CheckBox
+33         android:id="@+id/checkBox1"
+34         android:layout_width="wrap_content"
+35         android:layout_height="wrap_content"
+36         android:text="Banana" />
+37 
+38     <CheckBox
+39         android:id="@+id/checkBox2"
+40         android:layout_width="wrap_content"
+41         android:layout_height="wrap_content"
+42         android:text="Apple" />
+43 
+44     <CheckBox
+45         android:id="@+id/checkBox3"
+46         android:layout_width="wrap_content"
+47         android:layout_height="wrap_content"
+48         android:text="Orange" />
+49 
+50     <Button
+51         android:id="@+id/submitButton"
+52         android:layout_width="wrap_content"
+53         android:layout_height="wrap_content"
+54         android:layout_marginTop="20dp"
+55         android:background="@android:color/holo_blue_dark"
+56         android:onClick="onClick"
+57         android:text="Submit"
+58         android:textColor="@android:color/white" />
+59 </LinearLayout>
