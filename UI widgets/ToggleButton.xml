@@ -1,0 +1,16 @@
+ 1 <?xml version="1.0" encoding="utf-8"?>
+ 2 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 3     xmlns:app="http://schemas.android.com/apk/res-auto"
+ 4     xmlns:tools="http://schemas.android.com/tools"
+ 5     android:layout_width="match_parent"
+ 6     android:layout_height="match_parent"
+ 7     android:background="@android:color/white"
+ 8     android:gravity="center"
+ 9     tools:context=".MainActivity">
+10 
+11     <ToggleButton
+12         android:id="@+id/toggleButton"
+13         android:layout_width="wrap_content"
+14         android:layout_height="wrap_content" />
+15 </LinearLayout>
+16 
