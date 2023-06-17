@@ -1,0 +1,50 @@
+ 1 <?xml version="1.0" encoding="utf-8"?>
+ 2 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 3     xmlns:app="http://schemas.android.com/apk/res-auto"
+ 4     xmlns:tools="http://schemas.android.com/tools"
+ 5     android:layout_width="match_parent"
+ 6     android:layout_height="match_parent"
+ 7     android:background="@android:color/white"
+ 8     android:padding="16dp"
+ 9     tools:context=".MainActivity">
+10 
+11     <RatingBar
+12         android:id="@+id/ratingBar"
+13         android:layout_width="wrap_content"
+14         android:layout_height="wrap_content"
+15         android:layout_centerHorizontal="true"
+16         android:layout_centerVertical="true"
+17         android:stepSize="0.2" />
+18 
+19     <TextView
+20         android:id="@+id/textView1"
+21         android:layout_width="wrap_content"
+22         android:layout_height="wrap_content"
+23         android:layout_above="@+id/textView2"
+24         android:layout_centerHorizontal="true"
+25         android:layout_marginBottom="80dp"
+26         android:textColor="@android:color/black"
+27         android:textStyle="bold" />
+28 
+29     <TextView
+30         android:id="@+id/textView2"
+31         android:layout_width="wrap_content"
+32         android:layout_height="wrap_content"
+33         android:layout_above="@id/ratingBar"
+34         android:layout_centerHorizontal="true"
+35         android:layout_marginBottom="20dp"
+36         android:text="Please give us a rating:"
+37         android:textColor="@android:color/black"
+38         android:textStyle="bold" />
+39 
+40     <Button
+41         android:id="@+id/submitButton"
+42         android:layout_width="wrap_content"
+43         android:layout_height="wrap_content"
+44         android:layout_below="@+id/ratingBar"
+45         android:layout_centerHorizontal="true"
+46         android:layout_marginTop="20dp"
+47         android:onClick="onSubmit"
+48         android:text="Submit" />
+49 
+50 </RelativeLayout>
