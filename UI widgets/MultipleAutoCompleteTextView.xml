@@ -1,0 +1,25 @@
+1 <?xml version="1.0" encoding="utf-8"?>
+ 2 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 3     xmlns:app="http://schemas.android.com/apk/res-auto"
+ 4     xmlns:tools="http://schemas.android.com/tools"
+ 5     android:layout_width="match_parent"
+ 6     android:layout_height="match_parent"
+ 7     android:orientation="vertical"
+ 8     android:padding="16dp"
+ 9     tools:context=".MainActivity">
+10 
+11     <MultiAutoCompleteTextView
+12         android:id="@+id/multi_auto_complete"
+13         android:layout_width="match_parent"
+14         android:layout_height="wrap_content"
+15         android:completionThreshold="1"
+16         android:hint="Fruits"
+17         android:inputType="text" />
+18 
+19     <TextView
+20         android:layout_width="match_parent"
+21         android:layout_height="wrap_content"
+22         android:layout_marginTop="30dp"
+23         android:text="Text Inputs:\nApples, Apricots, Bananas, Blackberry, Blueberry, Cherries,
+24  Cranberry, Sugar-apple, Pitaya, Common fig, Cranberry, Jackfruit, Mangos, Papayas" />
+25 </LinearLayout>
