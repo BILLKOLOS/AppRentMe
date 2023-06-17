@@ -1,0 +1,49 @@
+ 1 <?xml version="1.0" encoding="utf-8"?>
+ 2 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 3     xmlns:app="http://schemas.android.com/apk/res-auto"
+ 4     xmlns:tools="http://schemas.android.com/tools"
+ 5     android:layout_width="match_parent"
+ 6     android:layout_height="match_parent"
+ 7     android:background="@android:color/white"
+ 8     android:padding="16dp"
+ 9     tools:context=".MainActivity">
+10 
+11     <Spinner
+12         android:id="@+id/spinner"
+13         android:layout_width="match_parent"
+14         android:layout_height="wrap_content"
+15         android:layout_below="@id/textView1"
+16         android:layout_centerHorizontal="true"
+17         android:layout_marginStart="10dp" />
+18 
+19     <TextView
+20         android:id="@+id/textView1"
+21         android:layout_width="wrap_content"
+22         android:layout_height="wrap_content"
+23         android:layout_marginBottom="10dp"
+24         android:text="Choose a country:"
+25         android:textColor="@android:color/black"
+26         android:textStyle="bold" />
+27 
+28     <TextView
+29         android:id="@+id/textView2"
+30         android:layout_width="wrap_content"
+31         android:layout_height="wrap_content"
+32         android:layout_below="@id/spinner"
+33         android:layout_marginTop="20dp"
+34         android:text="Capital"
+35         android:textColor="@android:color/black"
+36         android:textStyle="bold" />
+37 
+38     <TextView
+39         android:id="@+id/capital"
+40         android:layout_width="wrap_content"
+41         android:layout_height="wrap_content"
+42         android:layout_below="@id/spinner"
+43         android:layout_marginStart="5dp"
+44         android:layout_marginTop="20dp"
+45         android:layout_toRightOf="@+id/textView2"
+46         android:textColor="@android:color/black" />
+47 
+48 </RelativeLayout>
+49 
