@@ -164,3 +164,193 @@ private fun UserDetails(context: Context) {
                     .weight(weight = 3f, fill = false)
                     .padding(start = 16.dp)
             ) {
+        
+          // User's name
+                Text(
+                    text = "Victoria Steele",
+                    style = TextStyle(
+                        fontSize = 22.sp,
+                        fontFamily = FontFamily(Font(R.font.roboto_bold, FontWeight.Bold)),
+                    ),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+
+                Spacer(modifier = Modifier.height(2.dp))
+
+                // User's email
+                Text(
+                    text = "email123@email.com",
+                    style = TextStyle(
+                        fontSize = 14.sp,
+                        fontFamily = FontFamily(Font(R.font.roboto_regular, FontWeight.Normal)),
+                        color = Color.Gray,
+                        letterSpacing = (0.8).sp
+                    ),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
+
+            // Edit button
+            IconButton(
+                modifier = Modifier
+                    .weight(weight = 1f, fill = false),
+                onClick = {
+                    Toast.makeText(context, "Edit Button", Toast.LENGTH_SHORT).show()
+                }) {
+                Icon(
+                    modifier = Modifier.size(24.dp),
+                    imageVector = Icons.Outlined.Edit,
+                    contentDescription = "Edit Details",
+                    tint = MaterialTheme.colors.primary
+                )
+            }
+
+        }
+    }
+}
+
+// Row style for options
+@Composable
+private fun OptionsItemStyle(item: OptionsData, context: Context) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(enabled = true) {
+                Toast
+                    .makeText(context, item.title, Toast.LENGTH_SHORT)
+                    .show()
+            }
+            .padding(all = 16.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+
+        // Icon
+        Icon(
+            modifier = Modifier
+                .size(32.dp),
+            imageVector = item.icon,
+            contentDescription = item.title,
+            tint = MaterialTheme.colors.primary
+        )
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column(
+                modifier = Modifier
+                    .weight(weight = 3f, fill = false)
+                    .padding(start = 16.dp)
+            ) {
+
+                // Title
+                Text(
+                    text = item.title,
+                    style = TextStyle(
+                        fontSize = 18.sp,
+                        fontFamily = FontFamily(Font(R.font.roboto_medium, FontWeight.Medium))
+                    )
+                )
+
+                Spacer(modifier = Modifier.height(2.dp))
+
+                // Sub title
+                Text(
+                    text = item.subTitle,
+                    style = TextStyle(
+                        fontSize = 14.sp,
+                        letterSpacing = (0.8).sp,
+                        fontFamily = FontFamily(Font(R.font.roboto_regular, FontWeight.Normal)),
+                        color = Color.Gray
+                    )
+                )
+
+            }
+
+            // Right arrow icon
+            Icon(
+                modifier = Modifier
+                    .weight(weight = 1f, fill = false),
+                imageVector = Icons.Outlined.ChevronRight,
+                contentDescription = item.title,
+                tint = Color.Black.copy(alpha = 0.70f)
+            )
+        }
+
+    }
+}
+
+private fun prepareOptionsData() {
+
+    val appIcons = Icons.Outlined
+
+    optionsList.add(
+        OptionsData(
+            icon = appIcons.Person,
+            title = "Account",
+            subTitle = "Manage your account"
+        )
+    )
+
+    optionsList.add(
+        OptionsData(
+            icon = appIcons.ShoppingCart,
+            title = "Orders",
+            subTitle = "Orders history"
+        )
+    )
+
+    optionsList.add(
+        OptionsData(
+            icon = appIcons.Navigation,
+            title = "Addresses",
+            subTitle = "Your saved addresses"
+        )
+    )
+
+    optionsList.add(
+        OptionsData(
+            icon = appIcons.Payments,
+            title = "Saved Cards",
+            subTitle = "Your saved debit/credit cards"
+        )
+    )
+
+    optionsList.add(
+        OptionsData(
+            icon = appIcons.Settings,
+            title = "Settings",
+            subTitle = "App notification settings"
+        )
+    )
+
+    optionsList.add(
+        OptionsData(
+            icon = appIcons.Help,
+            title = "Help Center",
+            subTitle = "FAQs and customer support"
+        )
+    )
+
+    optionsList.add(
+        OptionsData(
+            icon = appIcons.LocalOffer,
+            title = "Offers and Coupons",
+            subTitle = "Offers and coupon codes for you"
+        )
+    )
+
+    optionsList.add(
+        OptionsData(
+            icon = appIcons.FavoriteBorder,
+            title = "Wishlist",
+            subTitle = "Items you saved"
+        )
+    )
+}
+
+data class OptionsData(val icon: ImageVector, val title: String, val subTitle: String)   
