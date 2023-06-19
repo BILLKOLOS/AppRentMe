@@ -166,3 +166,192 @@ fun LoginSignup1(
                 onText = {
                     textPassword = it
                 })
+           
+            // Sign in or Sign up button
+            Button(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(
+                        start = textFieldPadding1,
+                        end = textFieldPadding1,
+                        top = textFieldPadding1
+                    ),
+                shape = RoundedCornerShape(cornerRadius1),
+                colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primary),
+                onClick = {
+                    showToast(context = context, message = "Click: Button")
+                }) {
+                Text(
+                    text = if (isSignUp) "Sign Up" else "Sign In",
+                    style = TextStyle(
+                        fontFamily = FontFamily(Font(R.font.roboto_medium, FontWeight.Medium)),
+                        fontSize = 18.sp,
+                        color = Color.White
+                    )
+                )
+            }
+
+            Spacer(modifier = Modifier.height(48.dp))
+
+            Row(
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Divider1()
+                Text(
+                    modifier = Modifier.padding(start = 12.dp, end = 12.dp),
+                    text = if (isSignUp) "Or Sign up with" else "Or Sign in with",
+                    style = TextStyle(
+                        fontFamily = FontFamily(Font(R.font.roboto_regular, FontWeight.Normal)),
+                        fontSize = 16.sp,
+                        letterSpacing = 1.sp,
+                        color = Color.Black
+                    )
+                )
+                Divider1()
+            }
+
+            Row(
+                modifier = Modifier.padding(top = 8.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                SignupWithIcons1(
+                    iconRes = R.drawable.logo_google,
+                    contentDescription = if (isSignUp) "Sign up with Google" else "Sign in with Google",
+                    context = context
+                )
+                SignupWithIcons1(
+                    iconRes = R.drawable.logo_facebook,
+                    contentDescription = if (isSignUp) "Sign up with Facebook" else "Sign in with Facebook",
+                    context = context
+                )
+            }
+        }
+
+        val textBottom1 = if (isSignUp) "Already a member? " else "Don’t have an account? "
+        val textBottom2 = if (isSignUp) "Sign In" else "Sign Up"
+
+        Row(
+            modifier = Modifier.padding(bottom = 8.dp),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = textBottom1,
+                color = Color.Black,
+                fontFamily = FontFamily(
+                    Font(
+                        R.font.roboto_medium,
+                        weight = FontWeight.Medium
+                    )
+                ),
+                fontSize = 16.sp
+            )
+
+            Text(
+                modifier = Modifier.clickable {
+                    showToast(context = context, message = "Click")
+                },
+                text = textBottom2,
+                color = MaterialTheme.colors.primary,
+                fontFamily = FontFamily(
+                    Font(
+                        R.font.roboto_bold,
+                        weight = FontWeight.Bold
+                    )
+                ),
+                fontSize = 16.sp
+            )
+
+        }
+    }
+}
+
+@Composable
+private fun SignupWithIcons1(iconRes: Int, contentDescription: String, context: Context) {
+    OutlinedButton(
+        modifier = Modifier.size(46.dp),
+        shape = CircleShape,
+        contentPadding = PaddingValues(8.dp),
+        border = BorderStroke(0.dp, Color.Transparent),
+        elevation = ButtonDefaults.elevation(defaultElevation = 4.dp),
+        onClick = {
+            showToast(context = context, message = "Click")
+        }) {
+        Icon(
+            painter = painterResource(id = iconRes),
+            contentDescription = contentDescription,
+            tint = Color.Unspecified
+        )
+    }
+}
+
+
+@Composable
+private fun Divider1() {
+    Divider(
+        modifier = Modifier.width(64.dp),
+        color = Color(0xFF333333),
+        thickness = 1.dp
+    )
+}
+
+@Composable
+private fun LoginSignup1TextFiled(
+    text: String,
+    hint: String,
+    leadingIcon: ImageVector,
+    onText: (String) -> Unit
+) {
+
+    OutlinedTextField(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(
+                start = textFieldPadding1,
+                end = textFieldPadding1,
+                top = textFieldPadding1
+            )
+            .background(Color.White, RoundedCornerShape(cornerRadius1)),
+        value = text,
+        colors = TextFieldDefaults.outlinedTextFieldColors(
+            focusedBorderColor = MaterialTheme.colors.primary,
+            unfocusedBorderColor = Color.White,
+            cursorColor = MaterialTheme.colors.primary
+        ),
+        onValueChange = {
+            onText(it)
+        },
+        singleLine = true,
+        shape = RoundedCornerShape(cornerRadius1),
+        textStyle = loginSignup1TextField(MaterialTheme.colors.primary),
+        placeholder = {
+            Text(
+                text = hint,
+                style = loginSignup1TextField(Color(0xFF808080))
+            )
+        },
+        leadingIcon = {
+            Icon(
+                imageVector = leadingIcon,
+                contentDescription = hint,
+                tint = MaterialTheme.colors.primary
+            )
+        }
+    )
+}
+
+@Composable
+private fun loginSignup1TextField(textColor: Color) = TextStyle(
+    fontFamily = FontFamily(Font(R.font.roboto_medium, FontWeight.Medium)),
+    letterSpacing = 1.sp,
+    color = textColor
+)
+
+private fun showToast(context: Context, message: String) {
+    Toast.makeText(
+        context.applicationContext,
+        message,
+        Toast.LENGTH_SHORT
+    ).show()
+} 
