@@ -1,11 +1,3 @@
-# AppRentMe
-This repository contains a set of codes
-That will be useful during actual 
-Android application development using 
-Jetpack compose and XML  codes
-The codes are specific to the most vital 
-Parts of an application. 
-The codes are not arranged in order 
-But are placed here for a mock review 
-And peer criticism. 
-LEAVE A STAR  IF BEST, FORK IT AND SUMMIT  PULL REQUESTS FOR ENHANCEMENTS
+A set of codes that makes work easier for a mobile app developer using Jetpack compose framework, Java and primarily kotlin. 
+Basic UI codes that are easy to modify to fit your project's requirement. 
+Tested and effective, bug-free. 
